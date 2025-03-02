@@ -1,11 +1,11 @@
 # RAG Chat App
 
-This project is a locally hosted Retrieval-Augmented Generation (RAG) system integrated into a Streamlit chat application. It loads a PDF document, splits it into chunks, stores the chunks in a Qdrant vector database, and uses a RetrievalQA chain (powered by ChatGPT) to answer questions about the content.
+This project is a locally hosted Retrieval-Augmented Generation (RAG) system integrated into a Streamlit chat application. It loads multiple PDF documents, splits them into chunks, stores the chunks in a Qdrant vector database, and uses a RetrievalQA chain (powered by ChatGPT) to answer questions about the content.
 
 ## Features
 
-- Load and split a PDF into manageable chunks.
-- Store document chunks in Qdrant using vector embeddings.
+- Load and split multiple PDFs into manageable chunks.
+- Store documents chunks in Qdrant using vector embeddings.
 - Use a RetrievalQA chain with ChatGPT (GPT-4o-mini) to answer questions.
 - Chat interface built with Streamlit using `st.chat_message` for a modern UI.
 
@@ -34,8 +34,8 @@ Make sure Qdrant is running. You can start it using Docker:
 sudo docker run -d -p 6333:6333 qdrant/qdrant:latest
 ```
 
-### PDF Document:
-Place your PDF document in the project folder and update the PDF_PATH in streamlit_app.py accordingly.
+### PDF Documents:
+Place your PDF documents in the project folder and update the PDF_PATH in streamlit_app.py accordingly.
 
 ### Run the App:
 Start the Streamlit app with:
